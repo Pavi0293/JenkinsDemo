@@ -17,6 +17,14 @@ pipeline {
                 // You would put your build command here, e.g., `sh 'npm install'` or `sh 'mvn clean install'`
             }
         }
+         // Add a 15-second delay here
+        stage('Wait 15 Seconds') {
+            steps {
+                echo 'Sleeping for 15 seconds...'
+                sleep(15)
+            }
+        }
+        
         stage('Test') {
             steps {
                 echo 'Running tests...'
