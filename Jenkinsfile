@@ -1,5 +1,8 @@
 pipeline {
     agent any
+     options {
+        disableRestartFromStage()
+    }
 
     stages {
         stage('Checkout') {
